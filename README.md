@@ -13,6 +13,16 @@ Mais do que a execução técnica, este projeto simula o desenvolvimento de uma 
 O objetivo é oferecer insights valiosos, ao mesmo tempo em que demonstra como o Python pode ser aplicado na análise de dados financeiros do mundo real.
 
 
+## Onde encontrar?
+
+### code_webscraping:
+Aqui tem o código em Python com a extração dos dados do website IPEA Data. Desde o momento de extração até o tratamento dos dados e armazenamento deles em variáveis que serão usadas nas análises.
+
+### code_analysis_dollar_taxes
+
+Nessa pasta contém o código para as 3 análises realizadas + arquivo README.md com análise escrita em versão em inglês e português.
+
+
 ## Resumo - Documentação Técnica
 
 ### 1) Requisição HTTP
