@@ -17,7 +17,7 @@ O objetivo é oferecer insights valiosos, ao mesmo tempo em que demonstra como o
 
 ### 1) Requisição HTTP
 
-Estamos lidando com um website, portanto, temos que tratar isso como uma requisição. Logo, os primeiros passos foi a busca da URL e definição da função de requisição.
+Estamos lidando com um _website_, portanto, temos que tratar isso como uma requisição. Logo, os primeiros passos foi a busca da URL e definição da função de requisição.
 
 Além disso, também implementamos uma validação para verificar se a resposta foi bem-sucedida (status code 200).
 
@@ -26,20 +26,20 @@ Além disso, também implementamos uma validação para verificar se a resposta 
 Para realizar o parsing, que nada mais é do que uma leitura na página, utilizamos o BeautifulSoup para fazer isso. Algo muito importante aqui é prover informações para que a tabela ou dados que necessitem ser localizados, assim sejam. 
 
 Por conta disso, implementamos a localização padrão de tabela, considerando ID 'grd_DXMainTable' (padrão em páginas ASP.NET com DevExpress).
-- Aqui se essa localização não for bem sucedida, garantimos que a tabela será encontrada com uma outra busca:  <div id="divGrid"> uma <table class="dxgvTable_Moderno"> .
+Aqui se essa localização não for bem sucedida, garantimos que a tabela será encontrada com uma outra busca:  class="dxgvTable_Moderno".
 
 
 ### 3) Identificação do Cabeçalho
 
 Uma vez que os dados da tabela foram encontrados, agora é tentar localizar os cabeçalhos e isso fizemos usando a classe 'dxgvHeader_Moderno'.
-- Se não encontrar, aplica uma lógica alternativa para inferir o cabeçalho a partir das primeiras linhas da tabela.
+Se não encontrar, aplica uma lógica alternativa para inferir o cabeçalho a partir das primeiras linhas da tabela.
 
-Por se tratar de um website relativamente simples, como _fallback_ final, definimos manualmente os nomes das colunas: ['Data', 'Taxa de câmbio - R$ / US$ - comercial - compra - média'].
+Por se tratar de um website relativamente simples, como _fallback_ final, definimos manualmente os **nomes das colunas: ['Data', 'Taxa de câmbio - R$ / US$ - comercial - compra - média'].**
 
 ### 4) Extração das Linhas de Dados
 
 Assim que o cabeçalho foi encontrado, vamos procurar por linhas com a classe 'dxgvDataRow_Moderno'.
-- Se não houver, tenta identificar linhas de dados com base na quantidade de colunas e na ausência de elementos <input> (filtros).
+Se não houver, tenta identificar linhas de dados com base na quantidade de colunas e na ausência de elementos.
 
 Logo em seguida, foi necessário implementar uma regra que garantisse que o número de colunas das linhas de dados seja igual ao número de colunas do cabeçalho.
 
