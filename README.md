@@ -18,38 +18,34 @@ O objetivo é oferecer insights valiosos, ao mesmo tempo em que demonstra como o
 ### 1) Requisição HTTP
 
 Estamos lidando com um website, portanto, temos que tratar isso como uma requisição. Logo, os primeiros passos foi a busca da URL e definição da função de requisição.
-Além disso, também implementei uma validação para verificar se a resposta foi bem-sucedida (status code 200).
 
-### 2) Parsing do HTML
+Além disso, também implementamos uma validação para verificar se a resposta foi bem-sucedida (status code 200).
 
-* Utiliza BeautifulSoup para fazer o parsing do conteúdo da página HTML.
+### 2) Parsing HTML
 
-Localização da Tabela
+Para realizar o parsing, que nada mais é do que uma leitura na página, utilizamos o BeautifulSoup para fazer isso. Algo muito importante aqui é prover informações para que a tabela ou dados que necessitem ser localizados, assim sejam. 
 
-Tenta localizar a tabela com ID 'grd_DXMainTable' (padrão em páginas ASP.NET com DevExpress).
+Por conta disso, implementamos a localização padrão de tabela, considerando ID 'grd_DXMainTable' (padrão em páginas ASP.NET com DevExpress).
+  * Aqui se essa localização não for bem sucedida, garantimos que a tabela será encontrada com uma outra busca:  <div id="divGrid"> uma <table class="dxgvTable_Moderno"> .
 
-Se não encontrar, busca dentro de <div id="divGrid"> uma <table class="dxgvTable_Moderno"> (fallback).
+### 3) Identificação do Cabeçalho
 
-Identificação do Cabeçalho
+Uma vez que os dados da tabela foram encontrados, agora é tentar localizar os cabeçalhos e isso fizemos usando a classe 'dxgvHeader_Moderno'.
+  * Se não encontrar, aplica uma lógica alternativa para inferir o cabeçalho a partir das primeiras linhas da tabela.
 
-Tenta localizar os cabeçalhos com a classe 'dxgvHeader_Moderno'.
+Por se tratar de um website relativamente simples, como _fallback_ final, definimos manualmente os nomes das colunas: ['Data', 'Taxa de câmbio - R$ / US$ - comercial - compra - média'].
 
-Se não encontrar, aplica uma lógica alternativa para inferir o cabeçalho a partir das primeiras linhas da tabela.
+### 4) Extração das Linhas de Dados
 
-Como fallback final, define manualmente os nomes das colunas: ['Data', 'Taxa de câmbio - R$ / US$ - comercial - compra - média'].
+Assim que o cabeçalho foi encontrado, vamos procurar por linhas com a classe 'dxgvDataRow_Moderno'.
+  * Se não houver, tenta identificar linhas de dados com base na quantidade de colunas e na ausência de elementos <input> (filtros).
 
-Extração das Linhas de Dados
+Logo em seguida, foi necessário implementar uma regra que garantisse que o número de colunas das linhas de dados seja igual ao número de colunas do cabeçalho.
 
-Procura por linhas com a classe 'dxgvDataRow_Moderno'.
+### 5) Criação do DataFrame
 
-Se não houver, tenta identificar linhas de dados com base na quantidade de colunas e na ausência de elementos <input> (filtros).
+Usando pandas, construímos um _pandas.DataFrame_ com os dados extraídos e os nomes de colunas identificados. Também fizemos algumas alterações nos nomes das colunas para que fosse mais fácil trabalhar na parte da análise.
 
-Garante que o número de colunas das linhas de dados seja igual ao número de colunas do cabeçalho.
+### 6) Tratamento de Exceções
 
-Criação do DataFrame
-
-Constrói um pandas.DataFrame com os dados extraídos e os nomes de colunas identificados.
-
-Tratamento de Exceções
-
-Captura e imprime erros de requisição (RequestException) ou outros erros de execução
+Em todo o código você vai ver que lidamos com os possíveis erros por meio de exceções e prints de logs de erro.
