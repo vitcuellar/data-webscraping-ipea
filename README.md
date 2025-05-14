@@ -1,6 +1,6 @@
 # Webscraping: IPEA Data
 
-[![Leia em Inglês](https://img.shields.io/badge/Ler%20em-Inglês-blue)](README.md)
+[![Leia em Inglês](https://img.shields.io/badge/Ler%20em-Inglês-blue)](README_eng.md)
 
 Este projeto demonstra minhas habilidades em web scraping, análise de dados e visualização utilizando Python.
 
