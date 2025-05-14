@@ -1,5 +1,7 @@
 # Webscraping: IPEA Data
 
+[![Leia em Inglês](https://img.shields.io/badge/Ler%20em-Inglês-blue)](README.md)
+
 Este projeto demonstra minhas habilidades em web scraping, análise de dados e visualização utilizando Python.
 
 O principal objetivo é analisar a cotação histórica do dólar americano (USD) em relação ao real brasileiro (BRL), investigando como eventos globais importantes influenciaram suas variações ao longo dos anos. Os dados foram coletados por meio de técnicas de web scraping e processados com bibliotecas Python como BeautifulSoup (bs4), Pandas e Matplotlib.
