@@ -2,7 +2,7 @@
 
 [![Leia em Inglês](https://img.shields.io/badge/Ler%20em-Inglês-blue)](README_eng.md)
 
-## Sobre o Projeto
+## 💼 Sobre o Projeto
 
 Este projeto demonstra minhas habilidades em web scraping, análise de dados e visualização utilizando Python.
 
@@ -13,7 +13,7 @@ Mais do que a execução técnica, este projeto simula o desenvolvimento de uma 
 O objetivo é oferecer insights valiosos, ao mesmo tempo em que demonstra como o Python pode ser aplicado na análise de dados financeiros do mundo real.
 
 
-## Onde encontrar?
+## 🔎 Onde encontrar?
 
 ### code_webscraping:
 Aqui tem o código em Python com a extração dos dados do website IPEA Data. Desde o momento de extração até o tratamento dos dados e armazenamento deles em variáveis que serão usadas nas análises.
@@ -23,7 +23,7 @@ Aqui tem o código em Python com a extração dos dados do website IPEA Data. De
 Nessa pasta contém o código para as 3 análises realizadas + arquivo README.md com análise escrita em versão em inglês e português.
 
 
-## Resumo - Documentação Técnica
+## 👩🏻‍💻 Resumo - Documentação Técnica
 
 ### 1) Requisição HTTP
 
