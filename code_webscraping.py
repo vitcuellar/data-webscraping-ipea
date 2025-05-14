@@ -111,4 +111,28 @@ url_ipeadata = "http://www.ipeadata.gov.br/ExibeSerie.aspx?serid=38590&module=M"
 # Chamando a função para extrair os dados
 df_dados = extrair_dados_ipeadata(url_ipeadata)
 
-
+# Vamos fazer alguns tratamentos para corrigir o nome das colunas, ajustar o formato dos dados e remover linhas inválidas.
+# Se os dados foram extraídos com sucesso, vamos prosseguir com o tratamento...
+if df_dados is not None:
+    # Renomeando as colunas para facilitar o uso
+    df_dados.rename(columns={"Taxa de câmbio - R$ / US$ - comercial - compra - média": "Taxa Câmbio"}, inplace=True)
+    df_dados.rename(columns={"Data": "Data"}, inplace=True)
+    
+    # Remove possíveis linhas inválidas (como cabeçalhos duplicados na tabela)
+    df_dados = df_dados[~df_dados['Data'].astype(str).str.contains("Data", na=False)]
+    
+    # Aqui estamos fazendo tratamentos para converter as colunas para os tipos apropriados
+    df_dados['Data'] = pd.to_datetime(df_dados['Data'], format='%d/%m/%Y', errors='coerce')
+    df_dados['Taxa Câmbio'] = pd.to_numeric(df_dados['Taxa Câmbio'].astype(str).str.replace(',', '.'), errors='coerce')
+    
+    # Remoção de linhas com valores inválidos após a conversão
+    df_dados.dropna(inplace=True)
+    
+    # Armazena as colunas em variáveis x e y
+    x = df_dados['Data']
+    y = df_dados['Taxa Câmbio']
+    
+    # Exibe as primeiras linhas do DataFrame e o total de linhas
+    print("\nDados extraídos da tabela:")
+    print(df_dados.head())
+    print(f"\nTotal de linhas extraídas: {len(df_dados)}")
