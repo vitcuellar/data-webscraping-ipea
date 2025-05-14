@@ -12,6 +12,15 @@ It is supposed to be an analysis that can be replicated and developed using an I
 
 So, hopefully, it would be useful to you!
 
+## Where to find?
+
+### code_webscraping:
+Here you will find the Python code with data extraction from the IPEA Data website. From the extraction until data treatment and their storage in variables to be used in analysis. 
+
+### code_analysis_dollar_taxes
+
+This folder contains the code for 3 analyses, plus the README.md archive with both English and Portuguese versions.
+
 ## Resume - Technical Documentation 
 
 ### 1) HTTP Request
