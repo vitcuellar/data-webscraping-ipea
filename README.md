@@ -20,7 +20,7 @@ Aqui tem o código em Python com a extração dos dados do website IPEA Data. De
 
 ### code_analysis_dollar_taxes
 
-Nessa pasta contém o código para as 3 análises realizadas + arquivo README.md com análise escrita em versão em inglês e português.
+Nessa pasta contém o código para as 3 análises realizadas + arquivo README.md com análise escrita[code_analysis_dollar_taxes/analise.md]em versão em inglês e português.
 
 
 ## 👩🏻‍💻 Resumo - Documentação Técnica
