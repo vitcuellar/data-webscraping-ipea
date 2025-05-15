@@ -6,6 +6,11 @@
 
 ## ANÁLISE RETROSPECTIVA (2018-2024)
 
+Considerando o gráfico com a visualização da média anual da taxa de câmbio a partir de 2018, vide gráfico abaixo:
+
+![image](https://github.com/user-attachments/assets/e868b3a0-6c0e-4d79-839f-3c87b45948be)
+
+
 #### 2018 (Média R$3,66; Amplitude R$1,05; Mín. R$3,14; Máx. R$4,19):
 Volatilidade elevada (amplitude de R$1,05), refletindo incertezas eleitorais. 
 A mínima (R$3,14) ocorreu no início do ano, com o pico de R$4,19 no período de maior indefinição política.
@@ -37,6 +42,15 @@ Momentos de maior aversão ao risco fiscal e externo levaram à máxima de R$5,4
 Ano marcado por forte volatilidade (amplitude de R$1,35) e pela maior cotação nominal da série (R$6,20). 
 A desvalorização foi impulsionada pela continuidade dos cortes da Selic, reduzindo o diferencial de juros frente a um Federal Reserve restritivo. 
 Incertezas fiscais domésticas e um dólar globalmente forte agravaram a pressão. A mínima de R$4,85 representou momentos de alívio pontual ou fluxos específicos.
+
+Aqui temos a média Mês-Ano desde 2024 para focar nos pontos mencionados acima:
+![image](https://github.com/user-attachments/assets/78ee936d-508d-46f0-8161-42c22524f329)
+
+Não menos importante, os máximos e mínimos usados na análise de amplitude e volatilidade da moeda:
+
+![image](https://github.com/user-attachments/assets/d343447a-7704-450d-a370-da959596ae95)
+
+
 
 ## PERSPECTIVAS (2025)
 
