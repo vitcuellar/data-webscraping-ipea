@@ -15,12 +15,12 @@ O objetivo é oferecer insights valiosos, ao mesmo tempo em que demonstra como o
 
 ## 🔎 Onde encontrar?
 
-### code_webscraping:
+### [code_webscraping](main_archives)
 Aqui tem o código em Python com a extração dos dados do website IPEA Data. Desde o momento de extração até o tratamento dos dados e armazenamento deles em variáveis que serão usadas nas análises.
 
-### code_analysis_dollar_taxes
+### [code_analysis_dollar_taxes](code_analysis_dollar_taxes)
 
-Nessa pasta contém o código para as 3 análises realizadas + arquivo README.md com análise escrita em versão em inglês e português.
+Nessa pasta contém o código para as 3 análises realizadas + arquivo [analise.md com análise escrita](code_analysis_dollar_taxes/analise.md) em versão em inglês e português.
 
 
 ## 👩🏻‍💻 Resumo - Documentação Técnica
