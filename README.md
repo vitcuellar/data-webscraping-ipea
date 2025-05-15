@@ -1,6 +1,6 @@
 # Webscraping: IPEA Data
 
-[![Leia em Inglês](https://img.shields.io/badge/Ler%20em-Inglês-blue)](README_eng.md)
+[![Read in English](https://img.shields.io/badge/Read%20in-English-blue)](README_eng.md)
 
 ## 💼 Sobre o Projeto
 
