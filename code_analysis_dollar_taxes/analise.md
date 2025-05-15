@@ -1,6 +1,6 @@
 # SUMÁRIO EXECUTIVO
 
-[![Read in Inglês](https://img.shields.io/badge/Ler%20em-Inglês-blue)](analysis_eng.md)
+[![Read in Inglês](https://img.shields.io/badge/Read%20in-English-blue)](analysis_eng.md)
 
 * A taxa de câmbio USD/BRL demonstrou expressiva volatilidade e uma tendência de desvalorização do Real ao longo do período analisado (2018-2024), com projeção de continuidade dessa pressão para 2025, embora com menor amplitude intra-anual. 
 * O ano de 2020 se destacou pela maior amplitude (R$1,92) devido à pandemia, mas 2024 registrou a máxima nominal histórica (R$6,20) até então, refletindo um período de estresse acentuado.
